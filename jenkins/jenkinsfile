@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        // Git Clone
+        stage('Cloning Git') {
+            steps {
+                git 'https://github.com/xxxx'
+            }
+        }
+        // express dependency 설치
+        stage('Install dependencies') {
+            steps {
+                sh 'npm i -save express'
+            }
+        }
+        // shell script 동작
+        stage('Test') {
+            steps {
+                sh 'node app.js'
+            }
+        }
+    }
+}
