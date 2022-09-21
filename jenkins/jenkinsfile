@@ -11,6 +11,8 @@ pipeline {
         // express dependency 설치
         stage('Install dependencies') {
             steps {
+                sh 'echo shell scrip start'
+                sh 'npm install'
                 sh 'npm i -save express'
             }
         }
