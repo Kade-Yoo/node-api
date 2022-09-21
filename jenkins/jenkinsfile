@@ -5,7 +5,7 @@ pipeline {
         // Git Clone
         stage('Cloning Git') {
             steps {
-                git 'https://github.com/xxxx'
+                git 'https://github.com/Kade-Yoo/node-api.git'
             }
         }
         // express dependency 설치
