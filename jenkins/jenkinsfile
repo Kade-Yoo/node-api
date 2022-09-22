@@ -2,24 +2,17 @@ pipeline {
     agent any
 
     stages {
-        // Git Clone
-        stage('Cloning Git') {
-            steps {
-                git 'https://github.com/Kade-Yoo/node-api.git'
-            }
-        }
         // express dependency 설치
         stage('Install dependencies') {
             steps {
                 sh 'echo shell scrip start'
-                sh 'npm install'
-                sh 'npm i -save express'
             }
         }
         // shell script 동작
-        stage('Test') {
+        stage('Batch Test') {
             steps {
-                sh 'node app.js'
+                sh 'npm version patch'
+                sh 'node /batch/test.js'
             }
         }
     }
