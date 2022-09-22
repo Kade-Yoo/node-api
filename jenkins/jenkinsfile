@@ -11,7 +11,7 @@ pipeline {
         // shell script 동작
         stage('Batch Test') {
             steps {
-                sh 'npm version patch'
+//                 sh 'npm version patch'
                 sh 'node /batch/test.js'
             }
         }
