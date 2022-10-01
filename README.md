@@ -22,3 +22,8 @@
 ### AWS CodeCommit Test
 - AWS CodeCommit 복제 완료 
 - 하지만 동기화 실패... -> 방법을 찾아야함 일단 이게 급한게 아니니까 CodeBuild로 넘어가자
+
+### Error
+Invalid input: when using CodePipeline both sourceType, and artifactType must be set to: CODEPIPELINE
+- CodeBuild 등록 실패 해결 방안 아직 찾지 못함
+- Github Repository에 내 개인키 연결 완료
