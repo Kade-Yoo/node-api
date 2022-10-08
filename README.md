@@ -27,3 +27,18 @@
 Invalid input: when using CodePipeline both sourceType, and artifactType must be set to: CODEPIPELINE
 - CodeBuild 등록 실패 해결 방안 아직 찾지 못함
 - Github Repository에 내 개인키 연결 완료
+Ruby Version Error  
+`` 
+[2022-09-30T14:17:32.654584 #3980]  INFO -- : Starting Ruby version check.
+[2022-09-30T14:17:32.655009 #3980] ERROR -- : Current running Ruby version for root is 3.0.2, but Ruby version 2.x needs to be installed.
+[2022-09-30T14:17:32.655217 #3980] ERROR -- : If you already have the proper Ruby version installed, please either create a symlink to /usr/bin/ruby2.x,
+[2022-09-30T14:17:32.655399 #3980] ERROR -- : or run this install script with right interpreter. Otherwise please install Ruby 2.x for root user.
+[2022-09-30T14:17:32.655576 #3980] ERROR -- : You can get more information by running the script with --help option.
+[2022-09-30T14:17:59.082945 #3984]  INFO -- : Starting Ruby version check.
+``
+- apt-get ruby 삭제
+- /usr/bin/env: ‘ruby’: No such file or directory
+- 소프트 링크 지정
+``sudo ln -s /home/ubuntu/.rbenv/shims/ruby /usr/bin/ruby``
+Error installing /tmp/codedeploy-agent_1.1.0-4_all.tmp-20221008-95705-19ynbt0.deb
+- 
